@@ -8,17 +8,21 @@ $db = new PDO (
 
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
 //$query = $db->prepare("SELECT `common_name` FROM `Plants-2` WHERE `id` = :placeholder;");
-$query = $db->prepare("SELECT `common_name` FROM `plants` WHERE `common_name` = 'Purple Top'");
-$result = $query->execute();
+$query = $db->prepare("SELECT `description` FROM `plants` WHERE `common_name` = 'Purple Top'");
+$query->execute();
+$description = $query->fetch();
 
 
-if ($result){
-    $plants = $query->fetchAll();
-    echo"<pre>";
-    var_dump($plants);
-}else{
-    echo "Oops";
-}
+
+
+
+//if ($result){
+//    $plants = $query->fetchAll();
+//    echo"<pre>";
+//    var_dump($plants);
+//}else{
+//    echo "Oops";
+//}
 ?>
 
 <!DOCTYPE html>
@@ -46,12 +50,16 @@ if ($result){
 
 <section id="plant" class="sectionplant">
         <div id="one" class="plant"><h3></h3>
-            <?php
-            var_dump($result);
-            ?>
+
             <div class="info"></div>
-            <div class="photo"></div>
-            <div class="description"></div>
+            <div class="photo">
+                <a href = "images/pl2000010879.webp"</a>
+            </div>
+            <div class="description">
+                <?php
+                echo "<tr>{$description['description']}</tr>"
+                ?>
+            </div>
         </div>
         <div id="two" class="plant"><h3>Plant 2</h3></div>
         <div id="three" class="plant"><h3>Plant 3</h3></div>
