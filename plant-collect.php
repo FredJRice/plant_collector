@@ -9,8 +9,11 @@ $query1 = $db->prepare("SELECT `common_name`, `scientific_name`, `foliage`, `siz
 $query1->execute();
 $info = $query1->fetchAll();
 
-function displayPlant($value){
-    $plantInfo = ($value['common_name']."<pre>".$value['scientific_name']."<pre>".$value['foliage']."<pre>".$value['size']);
-    return $plantInfo;
+function displayPlant($values){
+    return $values['common_name'].$values['scientific_name'].$values['foliage'].$values['size'];
+}
+foreach($info as $value) {
+    var_dump(displayPlant($value));
+    break;
 }
 ?>

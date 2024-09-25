@@ -1,4 +1,5 @@
 <?php
+global $info;
 require_once 'plant-collect.php';
 ?>
 <!DOCTYPE html>
@@ -13,7 +14,6 @@ require_once 'plant-collect.php';
     <link rel="stylesheet" href="modern-normalize.css">
     <link rel="stylesheet" href="plant-collect.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--All metadata here-->
 </head>
 <body>
 <nav class="pnavbar">

@@ -77,20 +77,22 @@ h1,h2,h3,h4,h5,h6{
     flex-wrap: wrap;
     width:900px;
     padding: 100px 0;
+
 }
 
 .plant{
     position: relative;
     height: 300px;
     width: 400px;
-    border: 2px solid #dd2d2d;
+    border: 2px solid black;
     margin: 10px;
     border-radius: 15px;
     padding: 20px;
+    overflow: hidden;
 
 }
 .info{
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     position: absolute;
     top: 20px;
     height: 150px;
@@ -102,18 +104,18 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: center;
     align-content: center;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     border-radius: 5px;
     position: absolute;
     top: 20px;
-    right: 20px;
-    height: 200px;
-    width: 200px;
+    right: 30px;
+    height: 100px;
+    width: 100px;
     padding: 5px;
 }
 
 .describe{
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     position: absolute;
     border-radius: 10px;
     bottom: 10px;

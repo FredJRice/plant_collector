@@ -1,39 +1,42 @@
 <?php
 
 // 1. Require in the file you are testing
-require_once 'src/plant-collect.php';
+require_once 'plant-collect.php';
 
 //2. We get access to PHPUnit
 
 use PHPUnit\Framework\TestCase;
 
-class plantTest{
+class CollectorTest extends TestCase{
     //Write your tests here
     //Test methods must start with 'test'
     //Make test names descriptive
-    public function returnData()
+    public function testReturnData()
     {
         //Make some test inputs
-
-
+        $info=[
+        'common_name' => 'Purple Top',
+        'scientific_name' => 'Verbena bonariensis',
+        'foliage' => 'Deciduous',
+        'size' => '2.5 metres'
+        ];
 
         //Define the expected result
-        $expected = $value []
+        $expected = 'Purple TopVerbena bonariensisDeciduous2.5 metres';
 
         //What do we actually get?
-        $actual = adder($inputA, $inputB);
+        $actual = displayPlant($info);
         //Compare actual with expected
         $this->assertEquals($expected, $actual);
     }
 
-//    public function testAdderMalformedInputs()
-//    {
-//        $inputA = [1,2,3];
-//        $inputB = [1,2,3];
+    public function testPlantMalformedInputs()
+    {
+        $infos = '1';
 //        //Make sure to tell PHPUnit to expect the exception before you trigger it
-//        $this->expectException(TypeError::class);
+        $this->expectException(TypeError::class);
 //        //Because we are going to get an exception there is no need to save $actual
 //        adder($inputA, $inputB);
-//
-//    }
+        displayPlant($infos);
+    }
 }
