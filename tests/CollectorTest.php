@@ -17,12 +17,12 @@ class CollectorTest extends TestCase{
         $info=[
         'common_name' => 'Purple Top',
         'scientific_name' => 'Verbena bonariensis',
-        'foliage' => 'Deciduous',
+        'type' => 'Deciduous',
         'size' => '2.5 metres'
         ];
 
         //Define the expected result
-        $expected = 'Purple TopVerbena bonariensisDeciduous2.5 metres';
+        $expected = 'Purple Top<pre>Verbena bonariensis<pre>2.5 metres<pre>Deciduous';
 
         //What do we actually get?
         $actual = displayPlant($info);
