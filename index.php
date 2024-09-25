@@ -21,7 +21,7 @@ require_once 'plant-collect.php';
         <h1 class="title">Plant Collector</h1>
     </div>
 </nav>
-<div class="spacer"></div>
+<!--<div class="spacer"></div>-->
 <section class="sectionplant">
 <?php
 foreach($info as $value){
@@ -47,7 +47,8 @@ foreach($info as $value){
 <?php
 }
 ?>
-</section>
 <footer class="footer">© Fred Rice 2024</footer>
+</section>
+
 </body>
 </html>
