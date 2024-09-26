@@ -16,8 +16,12 @@ require_once 'plant-collect.php';
 </head>
 <body>
 <nav class="navbar">
-        <h1 class="title">Plant Collector</h1>
-        <h1 class ="add">+</h1>
+    <div>
+        <h1 class="navtitle">Plant Collector</h1>
+    </div>
+    <div>
+        <h1 class ="navadd">+</h1>
+    </div>
 </nav>
 <div class="spacer"></div>
 <section class="sectionplant">
