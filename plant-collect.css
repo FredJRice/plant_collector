@@ -4,21 +4,12 @@
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     margin: 0;
     padding: 0;
 
-}
-
-nav{
-    background-color: white;
-    height:60px;
-    width: 100%;
-    position:fixed;
-    top: 0;
-    border-bottom: 1px solid black;
-    z-index: 1;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -29,6 +20,16 @@ h1,h2,h3,h4,h5,h6{
     margin:15px;
 }
 
+navbar{
+    background-color: white;
+    height:60px;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    border-bottom: 1px solid black;
+    z-index: 1;
+}
+
 .title{
     color: #256325;
     text-align: center;
@@ -36,36 +37,11 @@ h1,h2,h3,h4,h5,h6{
     padding: 5px;
 }
 
-.title:hover{
+.add{
     color: black;
 }
-
-.navbar a{
-    color: black;
-}
-
-.pnavbar a:hover {
+.add:hover{
     color: red;
-}
-
-.pnavbar a:link{
-    text-decoration: none;
-}
-
-.pnavbar{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
-
-.navbar{
-    color: black;
-    background-color: white;
-    margin: 10px;
-    justify-content: center;
-    border-radius: 10px;
-    padding: 5px;
-    visibility: visible;
 }
 
 .sectionplant{

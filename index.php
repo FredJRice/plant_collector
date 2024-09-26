@@ -15,10 +15,9 @@ require_once 'plant-collect.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<nav class="pnavbar">
-    <div class="navbarleft">
+<nav class="navbar">
         <h1 class="title">Plant Collector</h1>
-    </div>
+        <h1 class ="add">+</h1>
 </nav>
 <div class="spacer"></div>
 <section class="sectionplant">
