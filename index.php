@@ -1,5 +1,4 @@
 <?php
-global $info;
 require_once 'plant-collect.php';
 ?>
 <!DOCTYPE html>
@@ -21,32 +20,17 @@ require_once 'plant-collect.php';
         <h1 class="title">Plant Collector</h1>
     </div>
 </nav>
-<!--<div class="spacer"></div>-->
+<div class="spacer"></div>
 <section class="sectionplant">
-<?php
-foreach($info as $value){
-?>
     <div class="plant">
         <div class="info">
             <?php
-             echo displayPlant($value);
+            echo displayPlant();
             ?>
         </div>
-        <div class="photo">
-            <?php
-               echo "<img src='{$value['photo']}'/>";
-            ?>
-        </div>
-        <div class="describe">
-            <?php
-            echo $value['description'];
-            ?>
-        </div>
+
     </div>
 
-<?php
-}
-?>
 <footer class="footer">© Fred Rice 2024</footer>
 </section>
 
