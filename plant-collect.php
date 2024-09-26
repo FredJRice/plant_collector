@@ -1,8 +1,4 @@
 <?php
-
-
-//Create function to initiate connection with database and create query
-
 function connectDb()
 {
     $db = new PDO (
@@ -21,21 +17,39 @@ function createQuery(){
 }
 
 function displayPlant(array $query){
-        $infos ="";
+    $infos ="";
     foreach($query as $value) {
-
+        $size = '';
+        if (isset($value['size']) ) {
+            $size = $value['size'] ?? '';
+        }
+        $type = '';
+        if (isset($value['type']) ) {
+            $type = $value['type'] ?? '';
+        }
+        $description = '';
+        if (isset($value['description']) ) {
+            $description = $value['description'] ?? '';
+        }
+        $photo = '';
+        if (isset($value['photo']) ) {
+            $photo = $value['photo'] ?? '';
+        }
         $infos .=   "<div class='plant'>".
                     "<div>".$value['common_name'].
                     '<br>'.'<br>'.$value['scientific_name'].
-                    '<br>'.'<br>'.$value['size'].
-                    '<br>'.'<br>'.$value['type'].
+                    '<br>'.'<br>'.$size.
+                    '<br>'.'<br>'.$type.
                     "</div>".
-                    "<div class = 'describe'>".$value['description'].
+                    "<div class = 'describe'>".$description.
                     "</div>".
-                    "<div class = 'photo'><img src =".$value['photo'].">".
+                    "<div class = 'photo'><img src =".$photo.">".
                     "</div>".
                     "</div>";
-
     }
-        return $infos;
+    return $infos;
+}
+
+function addPlant($newPlant){
+
 }
