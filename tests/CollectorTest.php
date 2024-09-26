@@ -56,10 +56,7 @@ class CollectorTest extends TestCase{
         $info=[[
             'common_name' => 'Purple Top',
             'scientific_name' => 'Verbena bonariensis',
-//            'size' => '2.5 metres',
-//            'type' => 'Deciduous',
-//            'description' => 'purple plant',
-//            'photo' => 'pic'
+
         ]];
 
         //Define the expected result

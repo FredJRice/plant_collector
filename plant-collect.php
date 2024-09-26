@@ -1,8 +1,5 @@
 <?php
 
-
-//Create function to initiate connection with database and create query
-
 function connectDb()
 {
     $db = new PDO (
