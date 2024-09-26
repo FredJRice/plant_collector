@@ -20,9 +20,9 @@ function createQuery(){
     return $info;
 }
 
-function displayPlant(){
+function displayPlant(array $query){
         $infos ="";
-    foreach(createQuery() as $value) {
+    foreach($query as $value) {
 
         $infos .=   "<div class='plant'>".
                     "<div>".$value['common_name'].

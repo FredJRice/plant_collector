@@ -23,7 +23,7 @@ require_once 'plant-collect.php';
 <div class="spacer"></div>
 <section class="sectionplant">
             <?php
-            echo displayPlant();
+            echo displayPlant(createQuery());
             ?>
 
 

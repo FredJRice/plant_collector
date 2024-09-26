@@ -14,15 +14,27 @@ class CollectorTest extends TestCase{
     public function testReturnData()
     {
         //Make some test inputs
-        $info=[
+        $info=[[
         'common_name' => 'Purple Top',
         'scientific_name' => 'Verbena bonariensis',
+        'size' => '2.5 metres',
         'type' => 'Deciduous',
-        'size' => '2.5 metres'
-        ];
+        'description' => 'purple plant',
+        'photo' => 'pic'
+        ]];
 
         //Define the expected result
-        $expected = 'Purple Top<pre>Verbena bonariensis<pre>2.5 metres<pre>Deciduous';
+        $expected = "<div class='plant'>".
+            "<div>".'Purple Top'.
+            '<br>'.'<br>'.'Verbena bonariensis'.
+            '<br>'.'<br>'.'2.5 metres'.
+            '<br>'.'<br>'.'Deciduous'.
+            "</div>".
+            "<div class = 'describe'>".'purple plant'.
+            "</div>".
+            "<div class = 'photo'><img src =".'pic'.">".
+            "</div>".
+            "</div>";
 
         //What do we actually get?
         $actual = displayPlant($info);
@@ -32,11 +44,11 @@ class CollectorTest extends TestCase{
 
     public function testPlantMalformedInputs()
     {
-        $infos = '1';
+        $infos = 1;
 //        //Make sure to tell PHPUnit to expect the exception before you trigger it
         $this->expectException(TypeError::class);
 //        //Because we are going to get an exception there is no need to save $actual
 //        adder($inputA, $inputB);
-        displayPlant($infos);
+        displayPlant();
     }
 }
