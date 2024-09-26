@@ -22,14 +22,10 @@ require_once 'plant-collect.php';
 </nav>
 <div class="spacer"></div>
 <section class="sectionplant">
-    <div class="plant">
-        <div class="info">
             <?php
             echo displayPlant();
             ?>
-        </div>
 
-    </div>
 
 <footer class="footer">© Fred Rice 2024</footer>
 </section>
