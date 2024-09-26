@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+
+}
+nav{
+    background-color: white;
+    height:60px;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    border-bottom: 1px solid black;
+    z-index: 1;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3em;
+    margin:15px;
+}
+.title{
+    color: #256325;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px;
+}
+.title:hover{
+    color: black;
+}
+.navbar a{
+    color: black;
+}
+
+.pnavbar a:hover {
+    color: red;
+}
+.pnavbar a:link{
+    text-decoration: none;
+}
+.pnavbar{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.navbar{
+    color: black;
+    background-color: white;
+    margin: 10px;
+    justify-content: center;
+
+    border-radius: 10px;
+    padding: 5px;
+    visibility: visible;
+}
+
+.sectionplant{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:900px;
+    padding: 100px 0;
+
+}
+
+.plant{
+    position: relative;
+    height: 300px;
+    width: 400px;
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 20px;
+    overflow: hidden;
+
+}
+.info{
+    border: 2px solid black;
+    position: absolute;
+    top: 20px;
+    height: 150px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 5px;
+}
+.photo{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /*border: 2px solid black;*/
+    /*border-radius: 20px;*/
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 150px;
+    width: 150px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.describe{
+    position: absolute;
+    border-radius: 10px;
+    bottom: 10px;
+    height: 100px;
+    width: 350px;
+    padding: 5px 5px;
+}
+
+.footer{
+    font-size: 3em;
+    padding: 20px;
+}
