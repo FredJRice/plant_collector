@@ -2,9 +2,27 @@
 require_once 'plant-collect.php';
 $db = connectDb();
 //check for POST
-//check data is ok
-//send to add function
-addPlant($db);
+if (isset($_POST['common_name']) && (isset($_POST['scientific_name']))) {
+    $inputtedcn = htmlspecialchars($_POST['common_name']);
+    $inputtedsc = htmlspecialchars($_POST['scientific_name']);
+    $inputtedsize = htmlspecialchars($_POST['size']);
+    $inputtedfoliage = ($_POST['']);
+    $inputteddescription = htmlspecialchars($_POST['description']);
+    $inputtedphoto = $_POST['photo'];
+
+    $sandata =[
+            'common_name'=> $inputtedcn,
+            'scientific_name' => $inputtedsc,
+            'size'=> $inputtedsize,
+            'foliage_id'=> $inputtedfoliage,
+            'description'=> $inputteddescription,
+            'photo'=> $inputtedphoto
+    ];
+//send to addFunction
+    addPlant($sandata, $db);
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
