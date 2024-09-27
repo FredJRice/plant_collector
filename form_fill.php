@@ -16,24 +16,35 @@ require_once 'plant-collect.php';
 </head>
 <body>
 <nav class="pnavbar">
-    <div class="navbarleft">
+    <div class="navbar">
         <h1 class="title">Plant Collector</h1>
     </div>
 </nav>
 <div class="spacer"></div>
 <section class="sectionplant">
-    <form action = "" method = "POST">
-        <input type = "text" name ="common name" placeholder ="Common name:">
-        <input type = "text" name ="scientific name" placeholder = "Scientific name:">
+    <form action = "index.php" method = "POST">
+        <input type = "text" name ="common_name" placeholder ="Common name:">
+        <br>
+        <br>
+        <input type = "text" name ="scientific_name" placeholder = "Scientific name:">
+        <br>
+        <br>
         <input type = "text" name ="size" placeholder = "Size:">
+        <br>
+        <br>
         <input type = "text" name ="foliage" placeholder = "Foliage:">
-        <input type = "text" name ="description" placeholder = "Description:">
+        <br>
+        <br>
+        <textarea type = "comment" name ="description" placeholder = "Description:"></textarea>
+        <br>
+        <br>
         <input type = "text" name ="photo" placeholder = "Photo path:">
+        <br>
+        <br>
         <input type = "submit">
     </form>
 
-
-    <footer class="footer">© Fred Rice 2024</footer>
+<!--    <footer class="footer">© Fred Rice 2024</footer>-->
 </section>
 
 </body>

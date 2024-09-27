@@ -8,8 +8,8 @@ function connectDb()
     return $db;
 }
 
-function createQuery(){
-    $db = connectDb();
+function createQuery($db){
+
     $query1 = $db->prepare("SELECT `common_name`, `scientific_name`, `size`, `photo`, `description`,`foliage`.`type` FROM `plants` JOIN `foliage` ON `plants`.`foliage_id` = `foliage`.`id`;");
     $query1->execute();
     $info = $query1->fetchAll();
@@ -50,6 +50,29 @@ function displayPlant(array $query){
     return $infos;
 }
 
-function addPlant($newPlant){
-
+function addPlant($db)
+{
+    $cname = $_POST['common_name'];
+    $sname = $_POST['scientific_name'];
+//    $size = $_POST['size'];
+//    $foliage = $_POST['foliage'];
+//    $description = $_POST['description'];
+//    $photo = $_POST['photo'];
+    $query = $db->prepare("INSERT INTO `plants` (common_name, scientific_name) VALUES (:cname,:sname)");
+    $result = $query->execute([
+        'cname' => $_POST['common_name'],
+        'sname' => $_POST['scientific_name'],
+    ]);
+    return $result;
 }
+//    if (isset($user_found['username'])){
+//        echo "User {$_POST['username']} found!!";
+//        echo "<br>";
+//
+//        $passwords_match = password_verify(£_POST['password'], $user_found['password']);
+//        if ($passwords_match){
+//            echo "Passwords match!";}
+//    }else {
+//    $query = $db->prepare('SELECT `common_name` FROM `plants` WHERE `username`=:username');
+//    $query->execute(['username' => $_POST['username']]);
+//    $user_found = $query->fetch();

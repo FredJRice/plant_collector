@@ -1,5 +1,10 @@
 <?php
 require_once 'plant-collect.php';
+$db = connectDb();
+//check for POST
+//check data is ok
+//send to add function
+addPlant($db);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +25,7 @@ require_once 'plant-collect.php';
         <h1 class="navtitle">Plant Collector</h1>
     </div>
     <div>
-        <h1 class ="navadd">+</h1>
+        <a href="form_fill.php"><h1 class ="navadd">+</h1></a>
     </div>
 </nav>
 <div class="spacer"></div>
