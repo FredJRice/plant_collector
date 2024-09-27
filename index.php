@@ -6,7 +6,6 @@ if (isset($_POST['common_name']) && (isset($_POST['scientific_name']))) {
     $inputtedcn = htmlspecialchars($_POST['common_name']);
     $inputtedsc = htmlspecialchars($_POST['scientific_name']);
     $inputtedsize = htmlspecialchars($_POST['size']);
-    $inputtedfoliage = ($_POST['']);
     $inputteddescription = htmlspecialchars($_POST['description']);
     $inputtedphoto = $_POST['photo'];
 
@@ -14,7 +13,7 @@ if (isset($_POST['common_name']) && (isset($_POST['scientific_name']))) {
             'common_name'=> $inputtedcn,
             'scientific_name' => $inputtedsc,
             'size'=> $inputtedsize,
-            'foliage_id'=> $inputtedfoliage,
+            'foliage_id'=> $_POST['foliage'],
             'description'=> $inputteddescription,
             'photo'=> $inputtedphoto
     ];

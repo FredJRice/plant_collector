@@ -32,10 +32,11 @@ require_once 'plant-collect.php';
         <input type = "text" name ="size" placeholder = "Size:">
         <br>
         <br>
-        <select name="foliage">
-            <option value="deciduous">Deciduous</option>
-            <option value="evergreen">Evergreen</option>
-            <option value="semi-evergreen">Semi-evergreen</option>
+        <select name="foliage" placeholder = "Select">
+            <option value="select">Select Option</option>
+            <option value=1>Deciduous</option>
+            <option value=2>Evergreen</option>
+            <option value=3>Semi-evergreen</option>
         </select>
         <br>
         <br>

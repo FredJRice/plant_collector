@@ -53,20 +53,15 @@ function displayPlant(array $query){
 
 function addPlant(array $sandata, $db)
 {
-    $cname = $_POST['common_name'];
-    $sname = $_POST['scientific_name'];
-    $size = $_POST['size'];
-    $description = $_POST['description'];
-    $foliage_id = $_POST['foliage'];
-    $photo = $_POST['photo'];
-    $query = $db->prepare("INSERT INTO `plants` (common_name, scientific_name, size, foliage_id, description, photo) VALUES (:cname,:sname,:size,:description,:foliage_id,:photo)");
+
+    $query = $db->prepare("INSERT INTO `plants` (common_name, scientific_name, size, foliage_id, description, photo) VALUES (:cname,:sname,:size,:foliage_id,:description,:photo)");
     $result = $query->execute([
-        'cname' => $_POST['common_name'],
-        'sname' => $_POST['scientific_name'],
-        'size' => $_POST['size'],
-        'foliage_id' => $_POST[''],
-        'description' => $_POST['description'],
-        'photo' => $_POST['photo'],
+        'cname' => $sandata['common_name'],
+        'sname' => $sandata['scientific_name'],
+        'size' => $sandata['size'],
+        'foliage_id' => $sandata['foliage_id'],
+        'description' => $sandata['description'],
+        'photo' => $sandata['photo'],
         ]);
         return $result;
     }
